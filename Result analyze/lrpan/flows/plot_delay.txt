@@ -1,0 +1,14 @@
+set terminal png
+set output 'delay.png'
+
+set xlabel "Flows"
+
+set ylabel "End to End Delay(ms)"
+
+set title "End to end delay over flows"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "delay_flows.dat" using 1:2 title 'End to End Delay'

@@ -1,0 +1,14 @@
+set terminal png
+set output 'Drop.png'
+
+set xlabel "packets/sec"
+
+set ylabel "Drop Ratio"
+
+set title "Drop Ratio over packets/sec"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "drop_pktsec.dat" using 1:2 title 'Drop Ratio'

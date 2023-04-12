@@ -1,0 +1,14 @@
+set terminal png
+set output 'Delivery.png'
+
+set xlabel "Flows"
+
+set ylabel "Delivery Ratio"
+
+set title "Delivery Ratio over flows"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "delivery_flows.dat" using 1:2 title 'Delivery Ratio'

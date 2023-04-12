@@ -1,0 +1,14 @@
+set terminal png
+set output 'throughput5.png'
+
+set xlabel "time"
+
+set ylabel "Throughput"
+
+set title "Throughput over time"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "throughput5.dat" using 1:2 title "Flow 6"

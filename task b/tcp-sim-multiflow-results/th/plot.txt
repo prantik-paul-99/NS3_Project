@@ -1,0 +1,16 @@
+set terminal png
+set output 'Throughput.png'
+
+set xlabel "Flows"
+
+set ylabel "Throughput"
+
+set title "Throughput over flows"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "th_sc.dat" using 1:2 title "Santa Cruz", \
+     "th_nr.dat" using 1:2 title "New Reno", \
+     "th_cu.dat" using 1:2 title "Cubic"

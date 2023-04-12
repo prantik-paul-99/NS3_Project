@@ -1,0 +1,14 @@
+set terminal png
+set output 'throughput.png'
+
+set xlabel "Flows"
+
+set ylabel "Throughput(Kbps)"
+
+set title "Throughput over flows"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "throughput_flows.dat" using 1:2 title 'throughput'

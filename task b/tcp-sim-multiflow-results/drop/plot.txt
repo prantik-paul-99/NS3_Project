@@ -1,0 +1,16 @@
+set terminal png
+set output 'drop.png'
+
+set xlabel "Flows"
+
+set ylabel "Drop Ratio"
+
+set title "Drop Ratio over flows"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "drop_sc.dat" using 1:2 title "Santa Cruz", \
+     "drop_nr.dat" using 1:2 title "New Reno", \
+     "drop_cu.dat" using 1:2 title "Cubic"

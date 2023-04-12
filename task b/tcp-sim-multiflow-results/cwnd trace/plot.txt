@@ -1,0 +1,16 @@
+set terminal png
+set output 'cwnd.png'
+
+set xlabel "time"
+
+set ylabel "Congestion Window"
+
+set title "Congestion window over flows"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "cwnd_sc.dat" using 1:3 title "Santa Cruz", \
+     "cwnd_nr.dat" using 1:3 title "New Reno", \
+     "cwnd_bbr.dat" using 1:3 title "Bbr"

@@ -1,0 +1,14 @@
+set terminal png
+set output 'Delivery.png'
+
+set xlabel "packets/sec"
+
+set ylabel "Delivery Ratio"
+
+set title "Delivery Ratio over packets/sec"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "delivery_pktsec.dat" using 1:2 title 'Delivery Ratio'

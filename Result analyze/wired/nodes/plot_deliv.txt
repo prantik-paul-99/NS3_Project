@@ -1,0 +1,14 @@
+set terminal png
+set output 'Delivery.png'
+
+set xlabel "nodes"
+
+set ylabel "Delivery Ratio"
+
+set title "Delivery Ratio over nodes"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "delivery_nodes.dat" using 1:2 title 'Delivery Ratio'

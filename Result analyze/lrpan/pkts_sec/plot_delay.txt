@@ -1,0 +1,14 @@
+set terminal png
+set output 'delay.png'
+
+set xlabel "packets/sec"
+
+set ylabel "End to End Delay(ms)"
+
+set title "End to end delay over packets/sec"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "delay_pktsec.dat" using 1:2 title 'End to End Delay'

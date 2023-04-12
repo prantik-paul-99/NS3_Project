@@ -1,0 +1,14 @@
+set terminal png
+set output 'Drop.png'
+
+set xlabel "Speed"
+
+set ylabel "Drop Ratio"
+
+set title "Drop Ratio over Speed"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "drop_speed.dat" using 1:2 title 'Drop Ratio'

@@ -1,0 +1,14 @@
+set terminal png
+set output 'throughput.png'
+
+set xlabel "Nodes"
+
+set ylabel "Throughput(Kbps)"
+
+set title "Throughput over nodes"
+set key reverse Left outside
+set grid
+
+set style data lines
+
+plot "throughput_nodes.dat" using 1:2 title 'throughput'
